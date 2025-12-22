@@ -8,9 +8,9 @@ import rehypeKatex from 'rehype-katex';
 
 
 const config: Config = {
-  title: 'Harmonix on AWS',
+  title: 'Harmonix on AWS (Deprecated)',
   // tagline: 'Orchestrate Platforms and Applications',
-  tagline: 'Fast, secure, and at-scale. A developer portal to meet your Enterprise needs.',
+  tagline: 'Deprecated reference implementation - No longer maintained',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -76,26 +76,10 @@ const config: Config = {
       },
       items: [
         {
-          to: '/docs/getting-started/deploy-the-platform', 
-          label: 'Getting Started', 
-          position: 'left'
-        },
-        {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Documentation',
-        },
-        // {to: '/blog', label: 'Blog', position: 'left'},
-        {
-          to: '/workshop', 
-          label: 'Workshop', 
-          position: 'left'
-        },
-        {
-          to: '/partners', 
-          label: 'Partners', 
-          position: 'left'
+          label: 'Documentation (Archived)',
         },
         {
           to: '/about', 
@@ -111,52 +95,44 @@ const config: Config = {
       ],
     },
     announcementBar: {
+      id: 'harmonix-deprecated-2025', // This forces the announcement to show even if previous ones were closed
       content:
-      'Harmonix on AWS 0.4.0 is now available.  Check it out and give it a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/awslabs/harmonix">GitHub</a>! ⭐️.  View changes <a target="_blank" rel="noopener noreferrer" href="https://harmonixonaws.io/docs/CHANGELOG">here</a>.',
-      backgroundColor: '#ffffff',
-      textColor: '#000000',
-      isCloseable: true,
+      '⚠️ <strong>Project Deprecated:</strong> Harmonix on AWS is no longer actively maintained. Please upgrade to v0.4.2 for critical security fixes. <a target="_blank" rel="noopener noreferrer" href="https://github.com/awslabs/harmonix">View on GitHub</a>',
+      backgroundColor: '#fff3cd', // Light yellow/amber background
+      textColor: '#856404', // Dark amber text
+      isCloseable: false, // Don't allow closing this important notice
     },
     footer: {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Documentation (Archived)',
           items: [
             {
-              label: 'Getting Started',
-              to: '/docs/getting-started/deploy-the-platform',
-            },
-            {
-              label: 'Tutorial',
+              label: 'Introduction',
               to: '/docs/intro',
             },
-          ],
-        },
-        {
-          title: 'Learn',
-          items: [
             {
-              label: 'Video Tutorials',
-              href: 'https://harmonixonaws.io/docs/getting-started/videos' 
-            }
-          ]
-        },
-        {
-          title: 'More',
-          items: [
-            // {
-            //   label: 'Blog',
-            //   to: '/blog',
-            // },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/awslabs/harmonix',
+              label: 'Features',
+              to: '/docs/features',
             },
           ],
         },
+        {
+          title: 'Project Info',
+          items: [
+            {
+              label: 'About',
+              to: '/about',
+            },
+            {
+              label: 'GitHub Repository',
+              href: 'https://github.com/awslabs/harmonix',
+            },
+          ]
+        },
       ],
-      copyright: `Built with ❤️ at AWS | Copyright © ${new Date().getFullYear()} Amazon.com, Inc. or its affiliates. All rights reserved`,
+      copyright: `Harmonix on AWS (Deprecated) | Copyright © ${new Date().getFullYear()} Amazon.com, Inc. or its affiliates. All rights reserved`,
     },
     colorMode: {
       defaultMode: 'light',
